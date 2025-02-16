@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>secretaria de obras</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="css/.variables.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/loginStyle.css">
+  <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+  <main class="login-main">
+
+    <div class="login-main__content">
+      <div class="logo">
+        <img src="../img/sinimbu-logo-max.jpg" alt="Bandeira de Sinimbu/RS">
+      </div>
+      <div class="login-main__title">
+        <h1>
+          Secretaria de Obras do Município de Sinimbu
+        </h1>
+      </div>
+    </div>
+
+    <div class="login-main__form hidden">
+      <form action="#" method="POST" class="login-form form">
+        <fieldset>
+          <legend>Validação de segurança</legend>
+
+          <div class="form-group">
+            <label for="usuario">Usuário:</label>
+            <input type="text" id="usuario" name="username" placeholder="username" minlength="4" maxlength="30" required>
+          </div>
+
+          <div class="form-group">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="password" minlength="8" placeholder="security key" required>
+          </div>
+
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary">Entrar</button>
+          </div>
+
+        </fieldset>
+      </form>
+      <div class="form-group">
+        <a href="#" class="forgot-password">Esqueceu a senha?</a>
+      </div>
+    </div>
+    <div class="login-main__button">
+      <button class="btn btn-login">ENTRAR</button>
+    </div>
+  </main>
+  <footer class="copyright">
+    <p>
+      &copy; 2025 Gabriel Luis Back, todos os direitos reservados.
+      <a href="https://github.com/GABIBACK13/" class="github-link">Saiba Mais</a>
+    </p>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
