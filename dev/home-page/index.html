@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
   <link rel="stylesheet" href="../CSS/variables.css">
   <link rel="stylesheet" href="../CSS/style.css">
   <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="../CSS/responsive.css">
   <title>Secretaria de Obras</title>
 </head>
 <body>
@@ -23,14 +24,44 @@
         </div>
       </div>
     </a>
-    <div class="navigation">
-      <ul class="navigation__list">
-        <li><a href="">item1</a></li>
-        <li><a href="">item2</a></li>
-        <li><a href="">item3</a></li>
-        <li><a href="">item4</a></li>
-      </ul>
-    </div>
+    <nav>
+      <button id="menu-btn">&#9776;</button>
+      <div class="navigation" id="menu">
+        <button id="close-btn">&times;</button>
+
+        <ul class="navigation__list">
+
+          <li id="home-list" class="selected">
+            <a href="">
+              <span class="material-symbols-outlined">home</span>
+              Home
+            </a>
+          </li>
+
+          <li id="chamadas-list">
+            <a href="#">
+              <span class="material-symbols-outlined">view_list</span>
+              Chamadas
+            </a>
+          </li>
+
+          <li id="data-view-list">
+            <a href="#">
+              <span class="material-symbols-outlined">query_stats</span>
+              Visão Geral
+            </a>
+          </li>
+
+          <li id="search-list">
+            <a href="#">
+              <span class="material-symbols-outlined">search</span>
+              Pesquisar
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
   </header>
   <main class="main">
     <div class="main__title">
@@ -100,6 +131,7 @@
       <a href="https://github.com/GABIBACK13/" class="github-link">Saiba Mais</a>
     </p>
   </footer>
+  <script src="../JS/main.js"></script>
   <script src="js/home.js"></script>
 </body>
 </html>

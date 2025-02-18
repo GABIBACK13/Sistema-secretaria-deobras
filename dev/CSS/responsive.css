@@ -1,0 +1,84 @@
+
+@media screen and (max-width: 768px) {
+  .hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+.blur {
+  filter: blur(2px); 
+  pointer-events: none; /* Evita interação com o fundo */
+  transition: filter 0.3s ease-in-out;
+}
+  
+  .header__content {
+    flex-flow: column wrap;
+    justify-content: center;
+  }
+  .header__title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 1rem;
+  }
+  
+  .navigation {
+    position: fixed;
+    top: -32px;
+    right: -60vw; /* Escondido fora da tela */
+    width: 60vw;
+    height: 100%;
+    background-color: rgba(0, 7, 0, 0.95);
+    padding-top: 60px;
+    transition: right 0.3s ease-in-out;
+    z-index: 100;
+  }
+  .navigation__list {
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    gap: 20%;
+  }
+  .navigation__list li {
+    height: 40px;
+    &.selected {
+      border-bottom: 4px solid var(--hover-green);
+    }
+  }
+  .navigation__list a {
+    font-size: 1.5rem;
+  }
+  #menu-btn {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    background: var(--bright-color);
+    color: var(--primary-color);
+    border: none;
+    cursor: pointer;
+    padding: 5px 12px;
+    border: solid 3px var(--border-color);
+    border-radius: 8px;
+    z-index: 1000;
+    &:hover {
+      background: var(--primary-color);
+      color: var(--bright-color);
+    }
+  }
+  #close-btn {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 3rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  /* Classe para exibir o menu */
+  .menu-open {
+    right: 0 !important;
+  }
+}
