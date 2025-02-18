@@ -8,5 +8,9 @@
   --primary-color: #185118;
   --secondary-color: #af0d0d;
   --shadow-color: rgba(0, 0, 0, 0.45);
-  --bright-color:white;
+  --hover-green: #6dd06d;
+  --bright-color:#fff;
+
+--font-main: 'Montserrat', arial, helvetica, sans-serif;
+--font-title: 'Tinos', arial, helvetica, sans-serif;
 }

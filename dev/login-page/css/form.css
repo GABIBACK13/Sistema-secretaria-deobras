@@ -42,7 +42,7 @@ fieldset input {
 }
 .btn-primary:hover {
   box-shadow: 1px 1px 3px var(--shadow-color);
-  background: #6dd06d;
+  background: var(--hover-green);
   color: var(--primary-color);
   cursor: pointer;
   font-weight: bold;
