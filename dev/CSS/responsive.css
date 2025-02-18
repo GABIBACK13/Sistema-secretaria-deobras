@@ -5,11 +5,11 @@
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
   }
-.blur {
+  .blur {
   filter: blur(2px); 
   pointer-events: none; /* Evita interação com o fundo */
   transition: filter 0.3s ease-in-out;
-}
+  }
   
   .header__content {
     flex-flow: column wrap;

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+  <link rel="stylesheet" href="../CSS/variables.css">
+  <link rel="stylesheet" href="../CSS/style.css">
+  <link rel="stylesheet" href="css/chamadas.css">
+  <link rel="stylesheet" href="../CSS/responsive.css">
+  <title>Secretaria de Obras</title>
+</head>
+<body>
+  <header class="header">
+    <a href="#">
+      <div class="header__content">
+        <div class="header__logo">
+          <img src="../img/sinimbu-logo-simples.png" alt="prefeitura de Sinimbu">
+        </div>
+        <div class="header__title">
+          <h1>
+            SECRETARIA DE OBRAS
+          </h1>
+        </div>
+      </div>
+    </a>
+    <nav>
+      <button id="menu-btn">&#9776;</button>
+      <div class="navigation" id="menu">
+        <button id="close-btn">&times;</button>
+
+        <ul class="navigation__list">
+
+          <li id="home-list" class="selected">
+            <a href="">
+              <span class="material-symbols-outlined">home</span>
+              Home
+            </a>
+          </li>
+
+          <li id="chamadas-list">
+            <a href="#">
+              <span class="material-symbols-outlined">view_list</span>
+              Chamadas
+            </a>
+          </li>
+
+          <li id="data-view-list">
+            <a href="#">
+              <span class="material-symbols-outlined">query_stats</span>
+              Visão Geral
+            </a>
+          </li>
+
+          <li id="search-list">
+            <a href="#">
+              <span class="material-symbols-outlined">search</span>
+              Pesquisar
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="main">
+    <table class="main__table">
+      <tr>
+        <th>Nome</th>
+        <th>Prazo</th>
+        <th>Local</th>
+        <th><span class="material-symbols-outlined">edit</span></th>
+        <th><span class="material-symbols-outlined">delete</span></th>
+      </tr>
+      <tr class="danger-tr">
+        <td><a href="#">Gabriel Luis Back</a></td>
+        <td><span class="material-symbols-outlined">calendar_clock</span> <br>
+          32 dias
+        </td>
+        <td>Alto Rio Pequeno</td>
+        <td title="editar"><a href="#" class="edit-link"><span class="material-symbols-outlined">edit</span></a></td>
+        <td title="excluir permanentemente"><a href="#" class="delete-link"><span class="material-symbols-outlined">delete</span></a></td>
+      </tr>
+
+      <tr>
+        <td><a href="#">fulano de tal</a></td>
+        <td>
+          <span class="material-symbols-outlined">calendar_clock</span><br>
+          2 dias
+        </td>
+        <td> Linha Almeida</td>
+        <td title="editar"><a href="#" class="edit-link"><span class="material-symbols-outlined">edit</span></a></td>
+        <td title="excluir permanentemente"><a href="#" class="delete-link"><span class="material-symbols-outlined">delete</span></a></td>
+      </tr>
+
+    </table>
+  </main>
+  <footer class="copyright">
+    <p>
+      &copy; 2025 Gabriel Luis Back, todos os direitos reservados.
+      <a href="https://github.com/GABIBACK13/" class="github-link">Saiba Mais</a>
+    </p>
+  </footer>
+  <script src="../JS/main.js"></script>
+  <script src="js/chamadas.js"></script>
+</body>
+</html>

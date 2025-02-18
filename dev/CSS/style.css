@@ -7,7 +7,6 @@
   padding: 0;
 }
 html, body {
-  height: 100%;
   display: flex;
   flex-flow: column wrap;
   font-family: var(--font-main);
@@ -119,6 +118,7 @@ li.selected {
   padding: 0 1rem;
   font: normal 0.8rem 'roboto', arial, helvetica;
   color: var(--text-color);
+  background-color: var(--bright-color);
   text-align: center;
 }
 .copyright a {

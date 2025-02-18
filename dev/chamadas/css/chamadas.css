@@ -1,0 +1,72 @@
+:root {
+  --text-color: #121212;
+  --background-color: #e5e5e5;
+  --hover-background-color: #f5f5f5;
+  --border-color: #aaa;
+  --max-priority-color: #ef6464;
+  --priority-color: #efc864;
+  --primary-color: #185118;
+  --secondary-color: #af0d0d;
+  --shadow-color: rgba(0, 0, 0, 0.551);
+  --hover-green: #6dd06d;
+  --bright-color:#fff;
+
+--font-main: 'Montserrat', arial, helvetica, sans-serif;
+--font-title: 'Tinos', arial, helvetica, sans-serif;
+}
+html, body {
+  display: block;
+  height: 100dvh;
+}
+.main__table {
+  width: min(95vw, 800px);
+  border-collapse: collapse;
+  margin: 10px auto;
+  background-color: var(--background-color);
+  border: 6px solid var(--primary-color);
+  box-shadow: 6px 6px 10px var(--shadow-color);
+}
+
+.main__table th,
+.main__table td {
+  padding: 10px 5px;
+  border-bottom: 1px solid var(--border-color);
+  & a.edit-link {
+    color: var(--primary-color);
+    cursor: pointer;
+    &:hover {
+      color: var(--hover-green);
+      text-decoration: underline;
+    }
+  }
+}
+.main__table th {
+  background-color: var(--background-color);
+  position: sticky;
+  top: -2px;
+  z-index: 10;
+  border-bottom: 3px solid var(--primary-color);
+}
+.main__table .danger-tr {
+  background-color: var(--max-priority-color);
+  color: var(--text-color);
+  font-weight: bold;
+  border: 3px solid var(--secondary-color);
+}
+a.delete-link span{
+  color: var(--text-color);
+  text-decoration: underline;
+  &:hover { 
+    color: var(--secondary-color);
+    text-decoration: none;
+  }
+}
+.main__table a {
+  color: var(--text-color);
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    color: var(--shadow-color);
+    text-decoration: underline;
+  }
+}
