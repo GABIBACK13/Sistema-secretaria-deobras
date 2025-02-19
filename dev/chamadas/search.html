@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../CSS/variables.css">
   <link rel="stylesheet" href="../CSS/style.css">
   <link rel="stylesheet" href="css/chamadas.css">
+  <link rel="stylesheet" href="css/search.css">
   <link rel="stylesheet" href="../CSS/responsive.css">
   <title>Secretaria de Obras</title>
 </head>
@@ -64,11 +65,29 @@
     </nav>
   </header>
   <main class="main">
-    <div class="main__title">
-      <h2>
-        Todas as chamadas
-      </h2>
-    </div>
+    <section class="main__search">
+      <form action="/" method="POST" class="search-form form">
+
+        <div class="search-bar">
+          <input type="search" name="search" id="search" placeholder="Pesquisar" value="" maxlength="30">
+
+          <div class="search-icon">
+            <span class="material-symbols-outlined">search</span>
+          </div>
+        </div>
+        <div class="search-options">
+          <select name="searchBy" id="searchBy">
+            <option value="name">Nome</option>
+            <option value="cpf">CPF</option>
+            <option value="priority">Prioridade</option>
+            <option value="local">Localidade</option>
+            <option value="title">Título</option>
+          </select>
+        </div>
+        <button type="submit" class="btn search-btn">Pesquisar</button>
+      </form>
+    </section>
+
     <table class="main__table">
       <tr>
         <th>Nome</th>
@@ -107,6 +126,6 @@
     </p>
   </footer>
   <script src="../JS/main.js"></script>
-  <script src="js/chamadas.js"></script>
+  <script src="js/search.js"></script>
 </body>
 </html>

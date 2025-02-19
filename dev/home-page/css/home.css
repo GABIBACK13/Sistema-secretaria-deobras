@@ -8,16 +8,6 @@
   flex: 1;
   background-color: var(--background-color);
 }
-.main__title {
-  font-size: 1rem;
-  font-weight: bold;
-  margin: 2rem;
-  text-align: center;
-  text-decoration: dotted underline;
-  color: var(--secondary-color);
-  text-shadow: -1px -1px 3px var(--max-priority-color); 
-}
-
 .main__display {
   position: relative;
   width: 90vw;

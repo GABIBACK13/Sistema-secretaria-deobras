@@ -1,0 +1,100 @@
+form.search-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  position: relative;
+  width: min(800px, 95vw);
+  margin: 5px auto;
+}
+.search-bar {
+  position: relative;
+  width: min(90vw, 400px);
+}
+#search {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 33px;
+  font-size: 1.1rem;
+  box-shadow: 3px 3px 5px var(--shadow-color);
+  transition: 0.1s ease;
+  &:hover {
+    border: 2px solid var(--primary-color);
+  }
+}
+.search-icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  font-size: 1.1rem;
+  border-radius: 33px;
+  color: var(--bright-color);
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+
+.search-options {
+  position: relative;
+  width: 150px;
+  &::after {
+    content: "▼";
+    font-size: 1.07rem;
+    color: var(--bright-color);
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; 
+  }
+}
+#searchBy {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  padding: 12px 24px 12px 12px;
+  border-radius: 33px;
+  border: none;
+  box-shadow: 3px 3px 5px var(--shadow-color);
+  transition: 0.1s ease;
+  background-color:var(--primary-color);
+  color: var(--bright-color);
+  font-weight: bolder;
+  font-size: 1.05rem;
+  cursor: pointer;
+  &:focus {
+    background-color: var(--bright-color);
+    color: var(--primary-color);
+    cursor: pointer;
+    box-shadow: inset 2px 2px 5px var(--shadow-color);
+  }
+  &:hover {
+    border: 2px solid var(--bright-color);
+  }
+}
+.search-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border: 2px solid var(--primary-color);
+  font-size: 1rem;
+  font-weight: bolder;
+  background-color: var(--bright-color);
+  color: var(--primary-color);
+  cursor: pointer;
+  box-shadow: 3px 3px 5px var(--shadow-color);
+  transition: 0.1s ease;
+  &:hover {
+    background-color: var(--hover-green);
+    cursor: pointer;
+    box-shadow: inset 1px 1px 5px var(--shadow-color);
+  }
+}
