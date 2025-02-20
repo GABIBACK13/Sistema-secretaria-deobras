@@ -1,0 +1,105 @@
+.form {
+  position: relative;
+  width: min(700px, 95vw);
+}
+
+fieldset {
+  border: 2px solid var(--secondary-color);
+  border-radius: 8px;
+  padding: 15px;
+  position: relative;
+}
+fieldset > div.form-group > input {
+  width: 100%;
+  padding: 10px;
+  margin: 16px 0px;
+  border-radius: 4px;
+  border: 1px solid var(--primary-color);
+}
+
+legend {
+  font-size: 16px;
+  font-weight: bold;
+  color:var(--primary-color);
+  padding: 0 10px;
+  background-color:var(--background-color);
+  position: absolute;
+  top: -10px;
+  left: 15px;
+}
+
+.form-group-2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  & input {
+    width: 130px;
+    padding: 10px;
+    margin: 0px;
+    border-radius: 4px;
+    border: 1px solid var(--primary-color);
+  }
+  & select {
+    width: 130px;
+    padding: 10px;
+    font-size: 1.05rem;
+    margin: 0px;
+    border-radius: 4px;
+    border: 1px solid var(--primary-color);
+    background-color: var(--bright-color);
+    color: var(--primary-color);
+    &:focus { 
+      cursor: pointer;
+      box-shadow: 2px 2px 5px var(--shadow-color);
+      background-color: var(--primary-color);
+      color: var(--bright-color);
+    }
+    & optgroup {
+      & option[value="1"] {
+        background-color: var(--hover-green);
+        color: var(--primary-color);
+      }
+      & option[value="2"] {
+        background-color: var(--priority-color);
+        color: var(--text-color);
+      }
+      & option[value="3"] {
+        background-color: var(--max-priority-color);
+        color: var(--secondary-color);
+      }
+    }
+  }
+}
+
+.btn-primary {
+  position: absolute;
+  width: min(200px, 25vw);
+  bottom: -15px;
+  right: 70px;
+  font-size: 1rem;
+  background-color: var(--primary-color);
+  color: var(--bright-color);
+  transition: background-color 0.2s ease;
+  box-shadow: 5px 5px 10px var(--shadow-color);
+  border-radius: 4px;
+}
+.btn-primary:hover {
+  box-shadow: 1px 1px 3px var(--shadow-color);
+  background: var(--hover-green);
+  color: var(--primary-color);
+  cursor: pointer;
+  font-weight: bold;
+  border: 2px solid var(--secondary-color);
+}
+
+.forgot-password {
+  display: block;
+  color: var(--primary-color);
+  text-decoration: underline;
+  cursor: pointer;
+  margin: 10px 0;
+}
+.forgot-password:hover {
+  color: var(--text-color);
+}
