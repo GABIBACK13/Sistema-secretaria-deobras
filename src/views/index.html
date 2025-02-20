@@ -1,0 +1,66 @@
+<%- include('includes/header.html') %>
+  <main class="main">
+    <div class="main__title">
+      <h2>
+        Você tem 2 tarefas urgentes !
+      </h2>
+    </div>
+    <div class="main__display">
+      <button id="prev" class="arrow">&#10094;</button>
+
+      <section class="main__alerts">
+
+        <div class="danger-alert alert">
+          <div class="alert__icon">
+            <img src="assets/img/icons/warning_24dp_AF0D0D_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+          </div>
+          <div class="alert__header">
+            <h3 class="alert__title">
+              Gabriel Luis Back
+            </h3>
+            <div class="alert__days">
+              <span class="svg-icon">
+                <img src="assets/img/icons/pending_actions_24dp_AF0D0D_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+              </span>
+              32 dias
+            </div>
+          </div>
+          <div class="alert__content">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, tempora quia unde aut sequi vel quae neque praesentium, deleniti incidunt dolor iste corrupti at enim esse odit officiis saepe natus!
+              Lorem ipsum dolor sit, amet consectetur.
+            </p>
+          </div>
+        </div>
+
+        <div class="alert">
+          <div class="alert__header">
+            <h3 class="alert__title">
+              <span class="svg-icon">
+                <img src="assets/img/icons/warning_24dp_AF0D0D_FILL0_wght400_GRAD0_opsz24.svg">
+              </span>
+              Gabriel Luis Back
+            </h3>
+            <div class="alert__days">
+              <span class="svg-icon">
+                <img src="assets/img/icons/pending_actions_24dp_AF0D0D_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+              </span>
+              2 dias
+            </div>
+          </div>
+          <div class="alert__content">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, tempora quia unde aut sequi vel quae neque praesentium, deleniti incidunt dolor iste corrupti at enim esse odit officiis saepe natus!
+            </p>
+          </div>
+        </div>
+
+      </section>
+      
+      <button id="next" class="arrow">&#10095;</button>
+    </div>
+  </main>
+  
+  <script src="assets/js/home.bundle.js"></script>
+
+<%- include('includes/footer.html') %>

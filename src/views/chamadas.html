@@ -1,0 +1,40 @@
+<%- include('includes/header.html') %>
+  <main class="main">
+    <div class="main__title">
+      <h2>
+        Todas as chamadas
+      </h2>
+    </div>
+    <table class="main__table">
+      <tr>
+        <th>Nome</th>
+        <th>Prazo</th>
+        <th>Local</th>
+        <th><span class="material-symbols-outlined">edit</span></th>
+        <th><span class="material-symbols-outlined">delete</span></th>
+      </tr>
+      <tr class="danger-tr">
+        <td><a href="#">Gabriel Luis Back</a></td>
+        <td><span class="material-symbols-outlined">calendar_clock</span> <br>
+          32 dias
+        </td>
+        <td>Alto Rio Pequeno</td>
+        <td title="editar"><a href="#" class="edit-link"><span class="material-symbols-outlined">edit</span></a></td>
+        <td title="excluir permanentemente"><a href="#" class="delete-link"><span class="material-symbols-outlined">delete</span></a></td>
+      </tr>
+
+      <tr>
+        <td><a href="#">fulano de tal</a></td>
+        <td>
+          <span class="material-symbols-outlined">calendar_clock</span><br>
+          2 dias
+        </td>
+        <td> Linha Almeida</td>
+        <td title="editar"><a href="#" class="edit-link"><span class="material-symbols-outlined">edit</span></a></td>
+        <td title="excluir permanentemente"><a href="#" class="delete-link"><span class="material-symbols-outlined">delete</span></a></td>
+      </tr>
+
+    </table>
+  </main>
+  <script src="assets/js/chamadas.bundle.js"></script>
+<%- include('includes/footer.html') %>

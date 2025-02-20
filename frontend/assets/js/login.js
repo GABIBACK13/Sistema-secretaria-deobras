@@ -1,3 +1,6 @@
+import '../css/login/loginStyle.css';
+import '../css/login/form.css';
+
 const entryButton = document.querySelector('.btn-login');
 
 entryButton.addEventListener('click', () => {

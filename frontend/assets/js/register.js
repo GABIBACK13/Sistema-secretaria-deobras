@@ -1,3 +1,6 @@
+import '../css/register/form.css';
+import '../css/register/register.css';
+
 const chamadaList = document.querySelector('#chamadas-list');
 const homeList = document.querySelector('#home-list');
 const dataViewList = document.querySelector('#data-view-list');

@@ -1,3 +1,12 @@
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
+
+// Importando módulos
+
+import './assets/css/variables.css'
+import './assets/css/style.css';
+import './assets/css/responsive.css';
+
 const menu = document.getElementById("menu");
 const openBtn = document.getElementById("menu-btn");
 const closeBtn = document.getElementById("close-btn");
