@@ -6,9 +6,9 @@ const dataViewList = document.querySelector('#data-view-list');
 const searchList = document.querySelector('#search-list');
 
 document.addEventListener('DOMContentLoaded', () => {
-  chamadaList.classList.add('selected');
+  dataViewList.classList.add('selected');
   
+  chamadaList.classList.remove('selected');
   homeList.classList.remove('selected');
-  dataViewList.classList.remove('selected');
   searchList.classList.remove('selected');
 });

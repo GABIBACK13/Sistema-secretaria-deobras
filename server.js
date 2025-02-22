@@ -8,6 +8,8 @@ const mongoose = require('mongoose');
 const csrf = require('csurf');
 const flash = require('connect-flash');
 
+
+const {checkCsrfError, csrfMiddleware, globalMesseges} = require('./src/middlewares/middleware');
 const app = express();
 const port = 3000;
 
@@ -30,7 +32,7 @@ const sessionOptions = session({
   resave: false,
   saveUninitialized: false,
   cookie: {
-    maxAge: 1000 * 60 * 60 * 24 * 7,
+    maxAge: 1000 * 60 * 60 * 24 * 21,
     httpOnly: true
   }
 });
@@ -40,10 +42,12 @@ app.use(flash());
 app.engine('.html', require('ejs').__express);
 app.set('views', path.join(__dirname, 'src', 'views'));
 app.set('view engine', 'html');
-//app.use(csrf());
+app.use(csrf());
 
 // middlewares  //
-
+app.use(checkCsrfError);
+app.use(csrfMiddleware);
+app.use(globalMesseges);
 app.use(route);
 
 app.on('connReady', () => {

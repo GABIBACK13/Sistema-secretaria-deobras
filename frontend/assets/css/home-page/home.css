@@ -10,7 +10,7 @@
 }
 .main__display {
   position: relative;
-  width: 90vw;
+  width: min(800px, 90vw);
   overflow: hidden;
   box-shadow: 8px 8px 10px var(--shadow-color);
   border-radius: 10px;
@@ -20,8 +20,8 @@
   transition: transform 0.4s ease-in-out;
 }
 .alert {
-  min-width: 90vw; /* 90% da largura da viewport */
-  height: 300px;
+  min-width: min(800px, 90vw); /* 90% da largura da viewport */
+  height: 330px;
   background-color: var(--priority-color);
   color: var(--text-color);
   display: flex;

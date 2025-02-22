@@ -7,11 +7,11 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
+  <%- include('includes/messeges.html') %>
   <main class="login-main">
-
     <div class="login-main__content">
       <div class="logo">
-        <img src="../img/sinimbu-logo-max.jpg" alt="Bandeira de Sinimbu/RS">
+        <img src="assets/img/sinimbu-logo-max.jpg" alt="Bandeira de Sinimbu/RS">
       </div>
       <div class="login-main__title">
         <h1>
@@ -21,7 +21,8 @@
     </div>
 
     <div class="login-main__form hidden">
-      <form action="#" method="POST" class="login-form form">
+      <form action="/login/verify" method="POST" class="login-form form">
+        <input type="hidden" name="_csrf" value=<%= csrfToken %>>
         <fieldset>
           <legend>Validação de segurança</legend>
 
