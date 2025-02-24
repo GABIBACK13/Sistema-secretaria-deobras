@@ -52,9 +52,6 @@
   flex-flow: column wrap;
 }
 .data-view__info .bottom{
-  position: absolute;
-  bottom: 0;
-  right: 0;
   font-size: 0.8rem;
   & span {
     font-size: 0.9rem;
@@ -103,6 +100,9 @@
 
 .btn-delete {
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: min(100px, 12vw);
   right: 10px;
   background-color: var(--secondary-color);

@@ -4,7 +4,7 @@ const Chamada = require('../models/Chamada');
 exports.index = async (req, res) => {
   try {
     let chamadas = await Chamada.getAll({priority: 3});
-    let chamadasLow = await Chamada.getAll({priority: 3});
+    let chamadasLow = await Chamada.getAll({priority:{ $lt: 3 }});
 
     if(chamadas.length === 0) chamadas = [];
     if(chamadasLow.length === 0) chamadasLow = [];

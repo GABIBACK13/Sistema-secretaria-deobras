@@ -12,7 +12,7 @@
         <% chamadas.forEach(chamada => { %>
           <% if(chamada.priority > 2) { %>
             <tr class="danger-tr">
-              <td><a href="/data-view/chamada/edit/<%=chamada._id%>"><%= chamada.name %></a></td>
+              <td><a href="/data-view/chamada/<%=chamada._id%>"><%= chamada.name %></a></td>
               <td><span class="material-symbols-outlined">calendar_clock</span> <br>
                 <%= chamada.diasDiferenca %> dias
               </td>

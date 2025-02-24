@@ -20,7 +20,7 @@
     font-weight: light;
     margin: 1rem;
   }
-  
+
   .navigation {
     position: fixed;
     top: -32px;
@@ -79,5 +79,28 @@
   /* Classe para exibir o menu */
   .menu-open {
     right: 0 !important;
+  }
+  .btn-primary {
+    width: 45vw;
+    bottom: -20px;
+    right: 50%;
+    transform: translateX(50%);
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .btn-delete {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min(100px, 16vw);
+    right: 30px;
+    background-color: var(--secondary-color);
+  }
+  .data-view {
+    border: none;
+    border-bottom: 2px solid var(--primary-color);
+    background-color: transparent;
+    margin-bottom: 2rem;
   }
 }

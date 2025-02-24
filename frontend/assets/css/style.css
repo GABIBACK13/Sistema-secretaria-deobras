@@ -128,7 +128,7 @@ li.selected {
   padding: 0 1rem;
   font: normal 0.8rem 'roboto', arial, helvetica;
   color: var(--text-color);
-  background-color: var(--bright-color);
+  background-color: #ffffff70;
   text-align: center;
 }
 .copyright a {
