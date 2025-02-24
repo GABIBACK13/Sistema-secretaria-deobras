@@ -3,13 +3,14 @@ const bcrypt = require('bcryptjs');
 
 const chamadaSchema = new mongoose.Schema({
   name: {type: String, required: true},
-  cpf: {type: String, required: true},
-  date: {type: Date, default: Date.now},
+  cpf: {type: String, required: false},
+  date: {type: Date, default: Date.now()},
   forcePriority: {type: Number, default: 0},
   priority: {type: Number, default: 1},
   local: {type: String, required: true},
   title: {type: String, required: true},
-  description: {type: String, required: true}
+  description: {type: String, required: true},
+  diasDiferenca: {type: Number, default: 1},
 });
 
 const ChamadaModel = mongoose.model('chamada', chamadaSchema);
@@ -49,11 +50,16 @@ class Chamada {
   };
   
   validate() {
+    if (!this.body.date) {
+      this.body.date = Date.now();
+    }
     if (!this.body.name || !this.body.local || !this.body.title || !this.body.description) {
       this.errors.push('Algum campo não foi preenchido corretamente.');
     }
-    if (!this.body.cpf || !this.ckeckCPF(this.body.cpf)) {
-      this.errors.push('CPF inválido.');
+    if (this.body.cpf) {
+      if (!this.ckeckCPF(this.body.cpf)) {
+        this.errors.push('CPF inválido.');
+      }
     }
   }
 
@@ -79,11 +85,15 @@ class Chamada {
     return chamada;
   }
 
-  static async getAll(priority = '') {
-    if(!priority) {
-      return await ChamadaModel.find({});
-    }
-    return await ChamadaModel.find({priority: priority});
+  static async getAll(search = {}) {
+    let chamadas = await ChamadaModel.find(search).sort({priority: -1});
+    return (chamadas.length > 0) ? chamadas : [];
+  }
+
+  static async getById(id) {
+    if(typeof id !== 'string') return;
+    const chamada = await ChamadaModel.findById(id);
+    return chamada;
   }
 }
 module.exports = Chamada;

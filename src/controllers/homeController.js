@@ -3,8 +3,8 @@ const Chamada = require('../models/Chamada');
 
 exports.index = async (req, res) => {
   try {
-    let chamadas = await Chamada.getAll('3').sort({date: -1});
-    let chamadasLow = await Chamada.getAll('2').sort({date: -1});
+    let chamadas = await Chamada.getAll({priority: 3});
+    let chamadasLow = await Chamada.getAll({priority: 3});
 
     if(chamadas.length === 0) chamadas = [];
     if(chamadasLow.length === 0) chamadasLow = [];

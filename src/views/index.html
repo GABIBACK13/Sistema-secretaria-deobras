@@ -2,7 +2,11 @@
   <main class="main">
     <div class="main__title">
       <h2>
-        Você tem 2 tarefas urgentes !
+        <% if(chamadas.length > 0 ) { %>
+          Você tem <%= chamadas.length %> tarefas urgentes !
+        <% } else { %>
+          Tudo Ótimo.
+        <% } %>
       </h2>
     </div>
     <div class="main__display">
@@ -23,7 +27,8 @@
                   <span class="svg-icon">
                     <img src="assets/img/icons/pending_actions_24dp_AF0D0D_FILL0_wght400_GRAD0_opsz24.svg" alt="">
                   </span>
-                  <%= chamada.date %> dias
+                  <%= chamada.
+                  diasDiferenca %> dias
                 </div>
               </div>
               <div class="alert__content">
@@ -48,7 +53,8 @@
                   <span class="svg-icon">
                     <img src="assets/img/icons/pending_actions_24dp_AF0D0D_FILL0_wght400_GRAD0_opsz24.svg" alt="">
                   </span>
-                  <%= chamada.date %> dias
+                  <%= chamada.
+                  diasDiferenca %> dias
                 </div>
               </div>
               <div class="alert__content">

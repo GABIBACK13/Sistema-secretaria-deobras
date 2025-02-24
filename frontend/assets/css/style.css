@@ -13,11 +13,10 @@ html, body {
   font-family: var(--font-main);
   background-image: linear-gradient(to bottom, var(--hover-background-color) 1%, var(--background-color));
 }
-
 a {
   text-decoration: none;
-  color:white;
-  cursor: initial;
+  color: white;
+  cursor: pointer;
 }
 .logo {
   margin: 32px;

@@ -1,7 +1,7 @@
 <%- include('includes/header.html') %>
   <main class="main">
     <section class="main__search">
-      <form action="/" method="POST" class="search-form form">
+      <form action="/search/request" method="POST" class="search-form form">
         <input type="hidden" name="_csrf" value=<%= csrfToken %>>
         <div class="search-bar">
           <input type="search" name="search" id="search" placeholder="Pesquisar" value="" maxlength="30">
@@ -13,7 +13,6 @@
         <div class="search-options">
           <select name="searchBy" id="searchBy">
             <option value="name">Nome</option>
-            <option value="cpf">CPF</option>
             <option value="priority">Prioridade</option>
             <option value="local">Localidade</option>
             <option value="title">Título</option>
@@ -31,27 +30,31 @@
         <th><span class="material-symbols-outlined">edit</span></th>
         <th><span class="material-symbols-outlined">delete</span></th>
       </tr>
-      <tr class="danger-tr">
-        <td><a href="#">Gabriel Luis Back</a></td>
-        <td><span class="material-symbols-outlined">calendar_clock</span> <br>
-          32 dias
-        </td>
-        <td>Alto Rio Pequeno</td>
-        <td title="editar"><a href="#" class="edit-link"><span class="material-symbols-outlined">edit</span></a></td>
-        <td title="excluir permanentemente"><a href="#" class="delete-link"><span class="material-symbols-outlined">delete</span></a></td>
-      </tr>
-
-      <tr>
-        <td><a href="#">fulano de tal</a></td>
-        <td>
-          <span class="material-symbols-outlined">calendar_clock</span><br>
-          2 dias
-        </td>
-        <td> Linha Almeida</td>
-        <td title="editar"><a href="#" class="edit-link"><span class="material-symbols-outlined">edit</span></a></td>
-        <td title="excluir permanentemente"><a href="#" class="delete-link"><span class="material-symbols-outlined">delete</span></a></td>
-      </tr>
-
+      <% if(chamadas.length > 0) { %> 
+        <% chamadas.forEach(chamada => { %>
+          <% if(chamada.priority > 2) { %>
+            <tr class="danger-tr">
+              <td><a href="/data-view/chamada/<%=chamada._id%>"><%= chamada.name %></a></td>
+              <td><span class="material-symbols-outlined">calendar_clock</span> <br>
+                <%= chamada.diasDiferenca %> dias
+              </td>
+              <td><%= chamada.local %></td>
+              <td title="editar"><a href="/data-view/chamada/edit/<%=chamada._id%>" class="edit-link"><span class="material-symbols-outlined">edit</span></a></td>
+              <td title="excluir permanentemente"><a href="/data-view/chamada/delete/<%=chamada._id%>" class="delete-link"><span class="material-symbols-outlined">delete</span></a></td>
+            </tr>
+          <% } else { %>
+            <tr>
+              <td><a href="/data-view/chamada/<%=chamada._id%>"><%= chamada.name %></a></td>
+              <td>
+                <span class="material-symbols-outlined">calendar_clock</span><br>
+                <%= chamada.diasDiferenca %> dias
+              </td>
+              <td> <%= chamada.local %></td>
+              <td title="editar"><a href="/data-view/chamada/edit/<%=chamada._id%>" class="edit-link"><span class="material-symbols-outlined">edit</span></a></td>
+              <td title="excluir permanentemente"><a href="/data-view/chamada/delete/<%=chamada._id%>" class="delete-link"><span class="material-symbols-outlined">delete</span></a></td>
+            </tr>
+          <% }}); %>
+          <% } %>
     </table>
   </main>
   <script src="assets/js/chamadas.bundle.js"></script>

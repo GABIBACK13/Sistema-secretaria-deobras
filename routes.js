@@ -15,10 +15,14 @@ router.get('/', loginRequired, homeController.index);
 
 // search routes
 router.get('/search', loginRequired, searchController.index);
+router.post('/search/request', loginRequired, searchController.search);
 
 // data-view routes
 router.get('/data-view', loginRequired, dataViewController.index);
 router.get('/data-view/chamada/:id', loginRequired, dataViewController.viewChamada);
+router.get('/data-view/chamada/delete/:id', loginRequired, dataViewController.delete);
+router.get('/data-view/chamada/edit/:id', loginRequired, dataViewController.edit);
+router.post('/data-view/chamada/saveEdit/:id', loginRequired, dataViewController.saveEdit);
 
 // register routes
 router.get('/register', loginRequired, registerController.index);

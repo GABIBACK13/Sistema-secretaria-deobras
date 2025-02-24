@@ -42,4 +42,3 @@ document.addEventListener("click", (event) => {
     }, 100); // Pequeno delay para evitar conflito
   }
 });
-
