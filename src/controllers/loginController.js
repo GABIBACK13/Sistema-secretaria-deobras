@@ -1,6 +1,4 @@
-const mongoose = require('mongoose');
 const User = require('../models/User');
-const { request } = require('express');
 
 exports.index = (req, res) => {
   return res.render('login');
@@ -9,7 +7,7 @@ exports.index = (req, res) => {
 exports.verify = async (req, res, next) => {
   const {user, password} = req.body;
   try {
-    const userFind = await User.findOne({user});
+    const userFind = await User.findOne({key: password});
     if (!userFind) {
       req.flash('errors', 'User not found');
       return res.redirect('/login');
@@ -19,6 +17,7 @@ exports.verify = async (req, res, next) => {
       return res.redirect('/login');
     }
     req.session.user = {user};
+    console.log(req.session.user);
     req.flash('success', 'Login Successful');
     return res.redirect('/');
 

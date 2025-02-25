@@ -33,11 +33,10 @@ router.get('/login', loginController.index);
 router.post('/login/verify', loginController.verify);
 
 // 404 page
-
-module.exports = router;
-
-/* router.use((req, res) => {
+router.use((req, res) => {
   res.status(404).render('404', {
     title: '404'
   });
-}); */
+});
+
+module.exports = router;
