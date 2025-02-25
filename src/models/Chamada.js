@@ -85,8 +85,11 @@ class Chamada {
     return chamada;
   }
 
-  static async getAll(search = {}) {
-    let chamadas = await ChamadaModel.find(search).sort({priority: -1});
+  static async getAll(search = {}, limit = 10, maxtimeMS = 5000) {
+    let chamadas = await ChamadaModel.find(search)
+    .limit(limit)
+    .maxTimeMS(maxtimeMS)
+    .sort({priority: -1});
     return (chamadas.length > 0) ? chamadas : [];
   }
 

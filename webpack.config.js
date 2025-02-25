@@ -10,6 +10,7 @@ module.exports = {
     register: './frontend/assets/js/register.js',
     search: './frontend/assets/js/search.js',
     dataView: './frontend/assets/js/dataView.js',
+    responsive: './frontend/assets/js/responsive.js',
   },
   output: {
     path: path.resolve(__dirname, 'public', 'assets', 'js'),

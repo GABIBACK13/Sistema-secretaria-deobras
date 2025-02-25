@@ -21,7 +21,7 @@
 
           <div class="data-input">
               <label for="date">Data:</label>
-              <input type="date" id="date" name="date" value="<%= chamada.date %>">
+              <input type="date" id="date" name="date" value="<%= chamada.date.toISOString().split('T')[0]; %>">
           </div>
 
           <div class="priority-input">
