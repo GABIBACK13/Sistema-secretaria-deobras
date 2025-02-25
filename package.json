@@ -1,6 +1,6 @@
 {
   "name": "task-manager",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "a project to manage your daily tasks",
   "main": "server.js",
   "scripts": {
